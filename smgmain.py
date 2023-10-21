@@ -1,5 +1,6 @@
-from SystemMessageGenerator import generate_system_message
+from SysMsgGen import generate_system_message
 from PyQt5.QtWidgets import QApplication, QWidget, QTextEdit, QPushButton, QVBoxLayout, QLabel, QStatusBar, QSpacerItem, QSizePolicy
+
 
 def process_input():
     user_input = input_area.toPlainText()
@@ -7,10 +8,12 @@ def process_input():
     output_area.setPlainText(output_message)
     status_bar.showMessage("System message generated successfully.")
 
+
 def clear_fields():
     input_area.clear()
     output_area.clear()
     status_bar.clearMessage()
+
 
 def init_pyqt():
     app = QApplication([])
@@ -20,7 +23,8 @@ def init_pyqt():
 
     layout = QVBoxLayout()
 
-    global input_area, output_area, status_bar  # Make these global to access in `process_input`
+    # Make these global to access in `process_input`
+    global input_area, output_area, status_bar
 
     input_label = QLabel("Enter your request:")
     layout.addWidget(input_label)
@@ -41,7 +45,8 @@ def init_pyqt():
     layout.addWidget(output_label)
 
     output_area = QTextEdit()
-    output_area.setPlaceholderText("Generated system message will appear here...")
+    output_area.setPlaceholderText(
+        "Generated system message will appear here...")
     layout.addWidget(output_area)
 
     status_bar = QStatusBar()
@@ -53,6 +58,7 @@ def init_pyqt():
     window.setLayout(layout)
     window.show()
     app.exec_()
+
 
 if __name__ == "__main__":
     init_pyqt()
