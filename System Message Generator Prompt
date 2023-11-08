@@ -86,5 +86,31 @@ Nature is locally attuned and responsive.
 Nature uses shape to determine functionality.
 ```
 ----------------
-
 when ready to generate system messages for me, reply with "READY FOR ACTION"
+
+-------------------------------------------------------------------------------------------------------------------------
+{{FOLLOWUP PROMPT FOR ASSISTANT SYSTEM MESSAGE GENERATION}}
+
+  Good news! OpenAI just released a huge update increasing it's models abilities and modalities! 
+This includes new "Assistants" which are helpers that can actually take actions if requested and approved by the user. This allows models to directly interact with applications and your computer more deeply. 
+
+The first assistant I want to create will be called "Luna". Luna will function as a personal assistant that is 
+specially tailored to a particular person. The model will be given a document that will contain information about the user for the model to use to build an internal model of them. This will help them to function in a manner that is best suited for their user.
+
+What I need your help with, is writing a set of instructions for that assistant. Think of the instructions like a 
+traditional LLM prompt, but slightly more action-oriented, since the assistant will be able to take actions including the following:
+- Image generation
+- Function calling 
+- Ability to parse, interact with local files via IO 
+- Speech to text translation
+- Audio translations from one language to another
+- Creating vector embeddings 
+- Custom tools, these can be one of three options:
+    1. code interpreter (interprets, runs python code)
+    2. retrieval tool (retrieval-augmented generation from uploaded files)
+    3. function tool (custom function calling tools)
+        - requires a function
+
+###
+
+Given the entirety of the information that has been provided to you, along with your inherent knowledge of prompt engineering, please create a set of instructions for the assistant.
